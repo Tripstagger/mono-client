@@ -1,0 +1,20 @@
+# dependencies
+/node_modules
+/dist
+/coverage
+
+#docs
+/docs
+
+#idea folder which is the IDE setting files
+.idea
+.vscode
+debug.log
+
+# misc
+.DS_Store
+
+# analyze webpack output json file
+stats.json
+#ignore local dev host file
+environments/.env.remote
