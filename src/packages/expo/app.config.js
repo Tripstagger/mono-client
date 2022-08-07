@@ -22,11 +22,11 @@ const envConfig = {
 const config = envConfig[STAGE ?? 'development']
 
 export default {
-  name: 'Example',
-  description: 'Expo + Next.js Monorepo Example',
-  slug: 'example',
-  scheme: 'example',
-  owner: 'poolpoolpool',
+  name: 'Tripstagger',
+  description: 'App for travelers',
+  slug: 'tripstagger',
+  scheme: 'tripstagger',
+  owner: 'aadamiak',
   icon: config.icon,
   version: '0.0.1',
   splash: {

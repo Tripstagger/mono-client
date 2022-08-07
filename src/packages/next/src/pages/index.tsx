@@ -1,1 +1,5 @@
-export { default } from 'app/pages/home'
+const Index = () => {
+  return <></>
+}
+
+export default Index;

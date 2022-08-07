@@ -1,22 +1,16 @@
 import React from 'react'
 import { enableScreens, enableFreeze } from 'react-native-screens'
 import { StatusBar } from 'expo-status-bar'
-import { SafeAreaProvider } from 'react-native-safe-area-context'
-import { DripsyProvider } from 'dripsy'
-
-import { theme } from 'app/theme'
-import { Navigation } from 'app/navigation'
+import { View, Text } from 'react-native'
 
 enableScreens(true)
 enableFreeze(true)
 
 export default function App() {
   return (
-    <DripsyProvider theme={theme}>
-      <SafeAreaProvider style={{ backgroundColor: 'black' }}>
-        <StatusBar style="dark" />
-        <Navigation />
-      </SafeAreaProvider>
-    </DripsyProvider>
+    <View>
+      <Text>Open up App.js to start working on your app!</Text>
+      <StatusBar style="auto" />
+    </View>
   )
 }

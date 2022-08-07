@@ -5,7 +5,7 @@ import React from 'react'
 class Document extends NextDocument {
   render() {
     return (
-      <Html lang="en" style={{ background: 'black' }}>
+      <Html lang="en">
         <Head>
           <meta charSet="UTF-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />

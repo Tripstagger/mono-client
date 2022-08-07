@@ -1,15 +1,16 @@
 # dependencies
-/node_modules
-/dist
-/coverage
+src/node_modules
+src/dist
+src/coverage
 
 #docs
 /docs
 
 #idea folder which is the IDE setting files
-.idea
-.vscode
-debug.log
+.idea/
+src/.expo
+*/.vscode
+src/debug.log
 
 # misc
 .DS_Store
