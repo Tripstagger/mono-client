@@ -1,13 +1,10 @@
 {
-  "name": "@tripstagger/app",
+  "name": "@tripstagger/auth",
   "version": "1.0.0",
   "scripts": {},
   "license": "MIT",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.4",
     "redux": "^4.2.0"
-  },
-  "devDependencies": {
-    "redux-devtools-extension": "^2.13.9"
   }
 }

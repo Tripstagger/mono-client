@@ -36,12 +36,14 @@
   },
   "workspaces": [
     "packages/app",
+    "packages/auth",
+    "packages/core",
     "packages/expo",
     "packages/next"
   ],
   "scripts": {
-    "dev:expo": "yarn workspace @expo-next-monorepo-example/expo dev",
-    "dev:next": "yarn workspace @expo-next-monorepo-example/next dev",
+    "dev:expo": "yarn workspace @tripstagger/expo dev",
+    "dev:next": "yarn workspace @tripstagger/next dev",
     "build": "cd packages/next && yarn build",
     "postinstall": "patch-package",
     "lint": "eslint \"packages/**/*.{js,jsx,ts,tsx,json}\"",

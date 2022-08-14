@@ -19,3 +19,5 @@ src/debug.log
 stats.json
 #ignore local dev host file
 environments/.env.remote
+
+*.log
