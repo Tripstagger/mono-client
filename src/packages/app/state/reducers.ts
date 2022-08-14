@@ -1,5 +1,5 @@
-import { authReducer } from '@tripstagger/auth/state'
+import { authReducer } from '@tripstagger/auth/state';
 
 export const reducers = {
-  auth: authReducer
-}
+  auth: authReducer,
+};
