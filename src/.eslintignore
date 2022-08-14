@@ -8,7 +8,9 @@ README.md
 package.json
 yarn-error.log
 yarn.lock
+webpack.config.js
 
+**/package.json
 **/tsconfig.json
 **/metro.config.js
 **/next.config.js

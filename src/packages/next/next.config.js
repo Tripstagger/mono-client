@@ -1,32 +1,26 @@
-const { withExpo } = require('@expo/next-adapter');
 const withFonts = require('next-fonts');
 const withImages = require('next-images');
-const withPlugins = require('next-compose-plugins');
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true'
 });
 const withTM = require('next-transpile-modules')([
-  'app',
-  '@gorhom/bottom-sheet',
-  '@gorhom/portal',
-  'dripsy',
-  '@dripsy/core',
-  'expo-next-react-navigation'
+  '@tripstagger/app',
+  '@tripstagger/auth'
 ]);
 
 const nextConfig = {
   images: {
     disableStaticImages: true
+  },
+  experimental: {
+    runtime: 'experimental-edge',
+    serverComponents: true
   }
 };
 
-module.exports = withPlugins(
-  [
-    withTM,
-    withFonts,
-    withImages,
-    withBundleAnalyzer,
-    [withExpo, { projectRoot: __dirname + '/../..' }]
-  ],
-  nextConfig
-);
+module.exports = (_phase) => {
+  const plugins = [withTM, withBundleAnalyzer, withImages, withFonts];
+  return plugins.reduce((acc, plugin) => plugin(acc), {
+    ...nextConfig
+  });
+};

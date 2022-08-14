@@ -1,4 +1,3 @@
-import { getInitialProps } from '@expo/next-adapter/document';
 import NextDocument, { Head, Html, Main, NextScript } from 'next/document';
 import React from 'react';
 
@@ -18,7 +17,5 @@ class Document extends NextDocument {
     );
   }
 }
-
-Document.getInitialProps = getInitialProps;
 
 export default Document;

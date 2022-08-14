@@ -4,12 +4,14 @@
   "license": "MIT",
   "version": "1.0.0",
   "devDependencies": {
+    "@babel/core": "^7.17.8",
     "@babel/eslint-parser": "7.17.0",
     "@babel/plugin-proposal-class-properties": "7.16.7",
     "@babel/plugin-proposal-object-rest-spread": "7.17.3",
     "@babel/plugin-syntax-dynamic-import": "7.8.3",
     "@babel/preset-env": "7.16.11",
     "@babel/preset-react": "7.16.7",
+    "babel-loader": "^8.2.4",
     "@typescript-eslint/eslint-plugin": "^5.33.0",
     "@typescript-eslint/parser": "^5.33.0",
     "eslint": "^8.17.0",
@@ -32,7 +34,14 @@
     "stylelint": "^14.6.1",
     "stylelint-config-prettier-scss": "^0.0.1",
     "stylelint-config-standard-scss": "^3.0.0",
-    "stylelint-scss": "^4.2.0"
+    "stylelint-scss": "^4.2.0",
+    "yarn-upgrade-all": "^0.7.1",
+    "webpack": "^5.71.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4",
+    "react-refresh": "^0.12.0",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.5",
+    "html-webpack-plugin": "^5.5.0"
   },
   "workspaces": [
     "packages/app",
@@ -42,18 +51,19 @@
     "packages/next"
   ],
   "scripts": {
-    "dev:expo": "yarn workspace @tripstagger/expo dev",
+    "dev:expo": "yarn workspace @tripstagger/expo start:expo",
     "dev:next": "yarn workspace @tripstagger/next dev",
     "build": "cd packages/next && yarn build",
     "postinstall": "patch-package",
-    "lint": "eslint \"packages/**/*.{js,jsx,ts,tsx,json}\"",
-    "lint:fix": "eslint --fix \"packages/**/*.{js,jsx,ts,tsx,json}\"",
-    "format": "prettier --write \"packages/**/*.{js,jsx,ts,tsx,html,css,scss}\" --config ./.prettierrc",
-    "prepare": "cd .. && husky install src/.husky"
+    "lint": "eslint \"packages/**/*.{ts,tsx}\"",
+    "lint:fix": "eslint --fix \"packages/**/*.{ts,tsx}\"",
+    "format": "prettier --write \"packages/**/*.{ts,tsx,html,css,scss}\" --config ./.prettierrc",
+    "prepare": "cd .. && husky install src/.husky",
+    "up": "yarn-upgrade-all"
   },
   "lint-staged": {
-    "packages/**/*.{js,jsx,ts,tsx,html,css,scss}":  "yarn format",
-    "packages/**/*.{js,jsx,ts,tsx,json}": "yarn lint:fix"
+    "packages/**/*.{ts,tsx,html,css,scss}": "yarn format",
+    "packages/**/*.{ts,tsx}": "yarn lint:fix"
   },
   "resolutions": {
     "babel-preset-expo": "^8.5.1"

@@ -21,3 +21,4 @@ stats.json
 environments/.env.remote
 
 *.log
+/src/packages/next/node_modules
