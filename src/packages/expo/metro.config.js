@@ -11,7 +11,7 @@ const workspaceRoot = path.resolve(__dirname, '../..');
 config.watchFolders = [workspaceRoot];
 config.resolver.nodeModulesPath = [
   path.resolve(projectRoot, 'node_modules'),
-  path.resolve(workspaceRoot, 'node_modules'),
+  path.resolve(workspaceRoot, 'node_modules')
 ];
 
 module.exports = config;

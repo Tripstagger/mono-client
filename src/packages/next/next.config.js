@@ -3,7 +3,7 @@ const withFonts = require('next-fonts');
 const withImages = require('next-images');
 const withPlugins = require('next-compose-plugins');
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
+  enabled: process.env.ANALYZE === 'true'
 });
 const withTM = require('next-transpile-modules')([
   'app',
@@ -11,13 +11,13 @@ const withTM = require('next-transpile-modules')([
   '@gorhom/portal',
   'dripsy',
   '@dripsy/core',
-  'expo-next-react-navigation',
+  'expo-next-react-navigation'
 ]);
 
 const nextConfig = {
   images: {
-    disableStaticImages: true,
-  },
+    disableStaticImages: true
+  }
 };
 
 module.exports = withPlugins(
@@ -26,7 +26,7 @@ module.exports = withPlugins(
     withFonts,
     withImages,
     withBundleAnalyzer,
-    [withExpo, { projectRoot: __dirname + '/../..' }],
+    [withExpo, { projectRoot: __dirname + '/../..' }]
   ],
   nextConfig
 );

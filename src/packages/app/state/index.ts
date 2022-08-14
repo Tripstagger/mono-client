@@ -14,7 +14,7 @@ const initStore = (initial?: AppState): EnhancedStore<AppState> => {
   const store = configureStore({
     reducer: rootReducer,
     preloadedState: initial,
-    devTools: isDev,
+    devTools: isDev
   });
 
   return store;

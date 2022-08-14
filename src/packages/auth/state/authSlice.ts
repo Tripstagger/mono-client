@@ -1,7 +1,7 @@
 import { createSlice, Slice } from '@reduxjs/toolkit';
 
 const initialState = {
-  isLogged: false,
+  isLogged: false
 };
 
 export type AuthState = typeof initialState;
@@ -9,7 +9,7 @@ export type AuthState = typeof initialState;
 const authSlice: Slice<AuthState> = createSlice({
   name: 'auth',
   initialState,
-  reducers: {},
+  reducers: {}
 });
 
 export const authReducer = authSlice.reducer;
