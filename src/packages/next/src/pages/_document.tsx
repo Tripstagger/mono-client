@@ -1,14 +1,14 @@
 import { getInitialProps } from '@expo/next-adapter/document'
-import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
+import NextDocument, { Head, Html, Main, NextScript } from 'next/document'
 import React from 'react'
 
 class Document extends NextDocument {
   render() {
     return (
-      <Html lang="en">
+      <Html lang='en'>
         <Head>
-          <meta charSet="UTF-8" />
-          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+          <meta charSet='UTF-8' />
+          <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
         </Head>
         <body>
           <Main />

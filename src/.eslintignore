@@ -1,0 +1,15 @@
+**/*.min.js
+**/*.test.js
+**/*.scss
+**/*.css
+
+LICENSE.md
+README.md
+package.json
+yarn-error.log
+yarn.lock
+
+**/tsconfig.json
+**/metro.config.js
+**/next.config.js
+**/expo/index.js

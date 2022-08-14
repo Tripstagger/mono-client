@@ -1,8 +1,9 @@
 import 'expo-dev-client'
 import 'expo-dev-launcher'
 import 'expo/build/Expo.fx'
-import { activateKeepAwake } from 'expo-keep-awake'
+
 import { registerRootComponent } from 'expo'
+import { activateKeepAwake } from 'expo-keep-awake'
 
 import App from './App'
 

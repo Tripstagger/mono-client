@@ -1,0 +1,80 @@
+{
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:prettier/recommended",
+		"plugin:react-hooks/recommended",
+		"plugin:css/standard",
+		"plugin:@typescript-eslint/recommended"
+	],
+	"plugins": [
+		"css",
+		"simple-import-sort",
+		"import",
+		"unused-imports",
+		"react",
+		"@typescript-eslint"
+	],
+	"parser": "@babel/eslint-parser",
+	"env": {
+		"browser": true,
+		"node": true,
+		"commonjs": true,
+		"es6": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true,
+			"modules": true,
+			"arrowFunctions": true,
+			"restParams": true,
+			"experimentalObjectRestSpread": true
+		}
+	},
+	"settings": {
+		"import/resolver": "webpack",
+		"react": {
+			"fragment": "pragma",  // Fragment to use (may be a property of <pragma>), default to "Fragment"
+			"version": "16.3"
+		}
+	},
+	"rules": {
+		"react/jsx-filename-extension": [ "warn", {"extensions": [".tsx"]} ],
+		"no-undef": "error",
+		"camelcase": "error",
+		"quotes": ["error", "single"],
+		"react/no-deprecated": "error",
+		"no-prototype-builtins": "off",
+		"padding-line-between-statements": [
+			"error",
+			{ "blankLine": "always", "prev": ["const", "let", "var"], "next": "*"},
+			{ "blankLine": "any", "prev": ["const", "let", "var"], "next": ["const", "let", "var"]},
+			{ "blankLine": "always", "prev": "*", "next": "return" }
+		],
+		"require-await": "error",
+		"prefer-const": "error",
+		"one-var": ["error", "never"],
+
+		// imports sort
+		"simple-import-sort/imports": "error",
+		"simple-import-sort/exports": "error",
+		"import/first": "error",
+		"import/newline-after-import": "error",
+		"import/no-duplicates": "error",
+
+		// unused-imports
+		"no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
+		"unused-imports/no-unused-imports": "error",
+		"unused-imports/no-unused-vars": [
+			"warn",
+			{ "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
+		],
+
+		// react
+		"react/jsx-boolean-value": "error",
+		"react/prop-types": "off",
+		"react/no-unescaped-entities": "off"
+	}
+}
